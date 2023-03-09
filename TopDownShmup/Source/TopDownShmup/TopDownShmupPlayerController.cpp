@@ -17,7 +17,7 @@ void ATopDownShmupPlayerController::PlayerTick(float DeltaTime)
 	// keep updating the destination every tick while desired
 	if (bMoveToMouseCursor)
 	{
-		MoveToMouseCursor();
+		//MoveToMouseCursor();
 	}
 }
 
@@ -32,6 +32,10 @@ void ATopDownShmupPlayerController::SetupInputComponent()
 	// support touch devices 
 	InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &ATopDownShmupPlayerController::MoveToTouchLocation);
 	InputComponent->BindTouch(EInputEvent::IE_Repeat, this, &ATopDownShmupPlayerController::MoveToTouchLocation);
+
+	// set up movement
+	InputComponent->BindAxis("MoveForward", this, &ATopDownShmupPlayerController::MoveForward);
+	InputComponent->BindAxis("MoveRight", this, &ATopDownShmupPlayerController::MoveRight);
 }
 
 void ATopDownShmupPlayerController::MoveToMouseCursor()
@@ -86,4 +90,43 @@ void ATopDownShmupPlayerController::OnSetDestinationReleased()
 {
 	// clear flag to indicate we should stop updating the destination
 	bMoveToMouseCursor = false;
+}
+
+void ATopDownShmupPlayerController::MoveForward(float Value)
+{
+	if (Value != 0.0f)
+	{
+		APawn* const Pawn = GetPawn();
+		if (Pawn)
+		{
+			Pawn->AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+		}
+	}
+}
+
+void ATopDownShmupPlayerController::MoveRight(float Value)
+{
+	if (Value != 0.0f)
+	{
+		APawn* const Pawn = GetPawn();
+		if (Pawn)
+		{
+			Pawn->AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+		}
+	}
+}
+
+void ATopDownShmupPlayerController::UpdateMouseLook()
+{
+	APawn* const Pawn = GetPawn();
+	if (Pawn)
+	{
+		FHitResult Hit;
+		GetHitResultUnderCursor(ECC_Visibility, false, Hit);
+		if (Hit.bBlockingHit)
+		{
+			FVector newDirection = Hit.ImpactPoint - Pawn->GetActorLocation();
+
+		}
+	}
 }
