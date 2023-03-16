@@ -64,3 +64,23 @@ void ATopDownShmupCharacter::BeginPlay()
 		}
 	}
 }
+
+// call on start fire on weapon
+void ATopDownShmupCharacter::OnStartFire()
+{
+	// check if weapon is valid
+	if (MyWeapon)
+	{
+		MyWeapon->OnStartFire();
+	}
+}
+
+// call on stop fire on weapon
+void ATopDownShmupCharacter::OnStopFire()
+{
+	// check if weapon is valid
+	if (MyWeapon)
+	{
+		MyWeapon->OnStopFire();
+	}
+}

@@ -29,9 +29,6 @@ void ATopDownShmupPlayerController::SetupInputComponent()
 	// set up gameplay key bindings
 	Super::SetupInputComponent();
 
-	InputComponent->BindAction("SetDestination", IE_Pressed, this, &ATopDownShmupPlayerController::OnSetDestinationPressed);
-	InputComponent->BindAction("SetDestination", IE_Released, this, &ATopDownShmupPlayerController::OnSetDestinationReleased);
-
 	// support touch devices 
 	InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &ATopDownShmupPlayerController::MoveToTouchLocation);
 	InputComponent->BindTouch(EInputEvent::IE_Repeat, this, &ATopDownShmupPlayerController::MoveToTouchLocation);
@@ -39,6 +36,10 @@ void ATopDownShmupPlayerController::SetupInputComponent()
 	// set up movement
 	InputComponent->BindAxis("MoveForward", this, &ATopDownShmupPlayerController::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &ATopDownShmupPlayerController::MoveRight);
+
+	// set up gun control
+	InputComponent->BindAction("Fire", IE_Pressed, this, &ATopDownShmupPlayerController::OnStartFire);
+	InputComponent->BindAction("Fire", IE_Released, this, &ATopDownShmupPlayerController::OnStopFire);
 }
 
 void ATopDownShmupPlayerController::MoveToMouseCursor()
@@ -83,18 +84,7 @@ void ATopDownShmupPlayerController::SetNewMoveDestination(const FVector DestLoca
 	}
 }
 
-void ATopDownShmupPlayerController::OnSetDestinationPressed()
-{
-	// set flag to keep updating destination until released
-	bMoveToMouseCursor = true;
-}
-
-void ATopDownShmupPlayerController::OnSetDestinationReleased()
-{
-	// clear flag to indicate we should stop updating the destination
-	bMoveToMouseCursor = false;
-}
-
+// moves character forward/backward
 void ATopDownShmupPlayerController::MoveForward(float Value)
 {
 	if (Value != 0.0f)
@@ -107,6 +97,7 @@ void ATopDownShmupPlayerController::MoveForward(float Value)
 	}
 }
 
+// moves character left/right
 void ATopDownShmupPlayerController::MoveRight(float Value)
 {
 	if (Value != 0.0f)
@@ -119,6 +110,7 @@ void ATopDownShmupPlayerController::MoveRight(float Value)
 	}
 }
 
+// changes the direction the character faces based on mouse location
 void ATopDownShmupPlayerController::UpdateMouseLook()
 {
 	APawn* const Pawn = GetPawn();
@@ -137,5 +129,31 @@ void ATopDownShmupPlayerController::UpdateMouseLook()
 			FRotator newRotation = newDirection.Rotation();
 			Pawn->SetActorRotation(newRotation);
 		}
+	}
+}
+
+// calls on start fire on character
+void ATopDownShmupPlayerController::OnStartFire()
+{
+	// get the pawn
+	APawn* const Pawn = GetPawn();
+	if (Pawn)
+	{
+		// cast to character class type
+		ATopDownShmupCharacter* MyCharacter = Cast<ATopDownShmupCharacter>(Pawn);
+		MyCharacter->OnStartFire();
+	}
+}
+
+// calls on stop fire on character
+void ATopDownShmupPlayerController::OnStopFire()
+{
+	// get the pawn
+	APawn* const Pawn = GetPawn();
+	if (Pawn)
+	{
+		// cast to character class type
+		ATopDownShmupCharacter* MyCharacter = Cast<ATopDownShmupCharacter>(Pawn);
+		MyCharacter->OnStopFire();
 	}
 }

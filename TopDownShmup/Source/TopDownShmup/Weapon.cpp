@@ -29,14 +29,27 @@ void AWeapon::Tick(float DeltaTime)
 
 }
 
-// on start fire
 void AWeapon::OnStartFire()
 {
-
+	// play firing loop sound
+	FireAC = PlayWeaponSound(FireLoopSound);
 }
 
-// on stop fire
 void AWeapon::OnStopFire()
 {
+	// stop firing loop sound
+	FireAC->Stop();
+	// play fire finish sound
+	PlayWeaponSound(FireFinishSound);
+}
 
+UAudioComponent* AWeapon::PlayWeaponSound(USoundCue* Sound)
+{
+	UAudioComponent* AC = NULL;
+	if (Sound)
+	{
+		AC = UGameplayStatics::SpawnSoundAttached(Sound, RootComponent);
+	}
+	
+	return AC;
 }
