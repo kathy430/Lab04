@@ -33,6 +33,9 @@ void AWeapon::OnStartFire()
 {
 	// play firing loop sound
 	FireAC = PlayWeaponSound(FireLoopSound);
+
+	// start muzzle flash
+	MuzzleFlash = UGameplayStatics::SpawnEmitterAttached(MuzzleFX, RootComponent, TEXT("MuzzleFlashSocket"));
 }
 
 void AWeapon::OnStopFire()
@@ -41,6 +44,9 @@ void AWeapon::OnStopFire()
 	FireAC->Stop();
 	// play fire finish sound
 	PlayWeaponSound(FireFinishSound);
+
+	// stop muzzle flash
+	MuzzleFlash->DeactivateSystem();
 }
 
 UAudioComponent* AWeapon::PlayWeaponSound(USoundCue* Sound)

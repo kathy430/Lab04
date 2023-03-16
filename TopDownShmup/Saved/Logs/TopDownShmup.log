@@ -1106,3 +1106,207 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2023.03.16-05.36.56:990][436]LogSavePackage: Moving '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Saved/BP_AssaultWeapon32091BAF4F21616D48E1F3941BA63B45.tmp' to '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Content/TopDownCPP/Blueprints/BP_AssaultWeapon.uasset'
 [2023.03.16-05.36.57:006][436]AssetCheck: New page: Asset Save: BP_AssaultWeapon
 [2023.03.16-05.36.57:006][436]LogContentValidation: Display: Validating Blueprint /Game/TopDownCPP/Blueprints/BP_AssaultWeapon.BP_AssaultWeapon
+[2023.03.16-06.01.52:483][810]LogLiveCoding: Display: Starting Live Coding compile.
+[2023.03.16-06.02.14:706][102]Display: Reload/Re-instancing Complete: No object changes detected
+[2023.03.16-06.02.14:706][102]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2023.03.16-06.03.19:041][294]LogDerivedDataCache: C:/Users/itsca/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.263 and deleted 0 file(s) with total size 0 MiB.
+[2023.03.16-06.03.32:302][444]LogLiveCoding: Display: Starting Live Coding compile.
+[2023.03.16-06.03.35:321][453]LogLiveCoding: Display:    Creating library C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_3.lib and object C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_3.exp
+[2023.03.16-06.03.36:071][455]LogClass: /Script/TopDownShmup Reload.
+[2023.03.16-06.03.36:071][455]LogClass: AssaultWeapon Reload.
+[2023.03.16-06.03.36:071][455]LogClass: Weapon Reload.
+[2023.03.16-06.03.36:074][455]LogClass: Could not find existing class AssaultWeapon in package /Script/TopDownShmup for reload, assuming new or modified class
+[2023.03.16-06.03.36:074][455]LogClass: Could not find existing class Weapon in package /Script/TopDownShmup for reload, assuming new or modified class
+[2023.03.16-06.03.36:084][455]Re-instancing AssaultWeapon after reload.
+[2023.03.16-06.03.36:110][455]Re-instancing Weapon after reload.
+[2023.03.16-06.03.36:243][455]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2023.03.16-06.03.36:556][456]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes changed, 2 classes unchanged
+[2023.03.16-06.03.36:556][456]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2023.03.16-06.03.52:571][212]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/TopDownCPP/Blueprints/BP_AssaultWeapon.BP_AssaultWeapon
+[2023.03.16-06.03.52:571][212]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.03.16-06.03.53:044][213]LogUObjectGlobals: Warning: Failed to find object 'Class None.DestructibleMesh'
+[2023.03.16-06.04.24:048][551]LogTexture: Display: Building textures: /Game/Effects/Textures/Weapon/T_muzzle_flashes.T_muzzle_flashes (TFO_AutoDXT, 128X256 X1X1) (Required Memory Estimate: 0.625 MB), EncodeSpeed: Fast
+[2023.03.16-06.04.24:048][551]LogTexture: Display: Building textures: /Game/Effects/Textures/Mask/T_SquareMaskTightEdge.T_SquareMaskTightEdge (TFO_AutoDXT, 512X512 X1X1) (Required Memory Estimate: 5.000 MB), EncodeSpeed: Fast
+[2023.03.16-06.04.24:048][551]LogTexture: Display: Building textures: /Game/Effects/Textures/LensFlare/T_Lensflare_01.T_Lensflare_01 (TFO_AutoDXT, 512X512 X1X1) (Required Memory Estimate: 5.000 MB), EncodeSpeed: Fast
+[2023.03.16-06.04.24:048][551]LogMaterial: Display: Missing cached shadermap for M_Lensflare_01 in PCD3D_SM5, Default, SM5 (DDC key hash: 2B24E4DA97795A32C4DF54DA468F1BBA8636635D), compiling. 
+[2023.03.16-06.04.24:155][551]LogTexture: Display: Building textures: /Game/Effects/ParticleSystems/Weapons/AssaultRifle/Muzzle/P_AssaultRifle_MF.P_AssaultRifle_MF:ThumbnailTexture (TFO_DXT1, 512X512 X1X1) (Required Memory Estimate: 5.000 MB), EncodeSpeed: Fast
+[2023.03.16-06.04.24:155][551]LogTexture: Display: Building textures: /Game/Effects/Textures/Smoke/T_Clouds_01.T_Clouds_01 (TFO_AutoDXT, 1024X1024 X1X1) (Required Memory Estimate: 20.000 MB), EncodeSpeed: Fast
+[2023.03.16-06.04.24:155][551]LogTexture: Display: Building textures: /Game/Effects/Textures/Smoke/T_SmokeBall_01_8_8.T_SmokeBall_01_8_8 (TFO_AutoDXT, 1024X1024 X1X1) (Required Memory Estimate: 20.000 MB), EncodeSpeed: Fast
+[2023.03.16-06.04.24:155][551]LogTexture: Display: Building textures: /Game/Effects/Textures/Noise/T_TileNoise.T_TileNoise (TFO_AutoDXT, 2048X2048 X1X1) (Required Memory Estimate: 80.000 MB), EncodeSpeed: Fast
+[2023.03.16-06.04.24:155][551]LogMaterial: Display: Missing cached shadermap for M_SoftGradient_Muzzle in PCD3D_SM5, Default, SM5 (DDC key hash: 23F8A772C87E17E68FD322507B24A25A310C14F9), compiling. 
+[2023.03.16-06.04.24:205][551]LogMaterial: Display: Missing cached shadermap for M_ImpactSmoke in PCD3D_SM5, Default, SM5 (DDC key hash: 6935EE6AB148468EA865C31A276B80987ED04394), compiling. 
+[2023.03.16-06.04.24:323][551]LogMaterial: Display: Missing cached shadermap for M_SmokeBall in PCD3D_SM5, Default, SM5 (DDC key hash: 4C3D7BF1613C3A1DAFC9934385C4823608EB821C), compiling. 
+[2023.03.16-06.04.24:366][551]LogMaterial: Display: Missing cached shadermap for M_muzzle_flash_subUV in PCD3D_SM5, Default, SM5 (DDC key hash: 17B35CFE1DC685E3095C7E247C00149D950B97CA), compiling. 
+[2023.03.16-06.04.24:396][551]LogMaterial: Display: Missing cached shadermap for M_MuzzleGlow in PCD3D_SM5, Default, SM5 (DDC key hash: 8046B4389F42C7DDCC74C1C7A88410F994E3FCC8), compiling. 
+[2023.03.16-06.04.24:442][551]LogStaticMesh: StaticMesh /Game/Effects/Meshes/Weapon/SM_MuzzleCone.SM_MuzzleCone should be resaved to improve async compilation performance.
+[2023.03.16-06.04.24:462][551]LogStaticMesh: Display: Building static mesh SM_MuzzleCone...
+[2023.03.16-06.04.24:462][551]LogStaticMesh: Display: Waiting for static meshes to be ready 0/1 (/Game/Effects/Meshes/Weapon/SM_MuzzleCone) ...
+[2023.03.16-06.04.24:483][551]LogStaticMesh: Built static mesh [0.01s] /Game/Effects/Meshes/Weapon/SM_MuzzleCone.SM_MuzzleCone
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: ================================================
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: Total job queries 299, among them cache hits 0 (0.00%)
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: Tracking 1 distinct input hashes that result in 1 distinct outputs (100.00%)
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: RAM used: 0.00 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.00%
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: Shaders Compiled: 299
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: Jobs assigned 53, completed 1 (1.89%)
+[2023.03.16-06.04.26:090][647]LogShaderCompilers: Display: Average time worker was idle: 0.00 s
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Time job spent in pending queue: average 0.34 s, longest 1.87 s
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Job execution time: average 1.88 s, max 1.88 s
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Job life time (pending + execution): average 1.92 s, max 1.92
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 1.92 s
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Jobs were issued in 11 batches (only local compilation was used), average 4.82 jobs/batch
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Average processing rate: 0.52 jobs/sec
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Effective parallelization: 0.49 (times faster than compiling all shaders on one thread). Compare with number of workers: 10
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Top 1 most expensive shader types by average time:
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: TTranslucencyShadowDepthVS<TranslucencyShadowDepth_Standard> (compiled    1 times, average 0.94 sec, max 0.94 sec, min 0.94 sec)
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: Top 1 shader types by total compile time:
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: TTranslucencyShadowDepthVS<TranslucencyShadowDepth_Standard> - 100.00% of total time (compiled    1 times, average 0.94 sec, max 0.94 sec, min 0.94 sec)
+[2023.03.16-06.04.26:091][647]LogShaderCompilers: Display: ================================================
+[2023.03.16-06.04.55:974][304]BlueprintLog: New page: Compile BP_AssaultWeapon
+[2023.03.16-06.04.56:063][304]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2023.03.16-06.04.59:135][611]LogSlate: Window 'BP_AssaultWeapon' being destroyed
+[2023.03.16-06.04.59:138][611]LogSlate: Window 'BP_AssaultWeapon' being destroyed
+[2023.03.16-06.04.59:149][611]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2023.03.16-06.04.59:149][611]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.03.16-06.05.00:236][734]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.03.16-06.05.00:247][734]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.03.16-06.05.00:247][734]PIE: New page: PIE session: TopDownExampleMap (Mar 15, 2023, 4:05:00 PM)
+[2023.03.16-06.05.00:247][734]LogPlayLevel: Creating play world package: /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap
+[2023.03.16-06.05.00:253][734]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006298s)
+[2023.03.16-06.05.00:253][734]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/TopDownCPP/Maps/TopDownExampleMap.TopDownExampleMap to /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap (0.006367s)
+[2023.03.16-06.05.00:253][734]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.03.16-06.05.00:253][734]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.03.16-06.05.00:253][734]LogAIModule: Creating AISystem for world TopDownExampleMap
+[2023.03.16-06.05.00:253][734]LogPlayLevel: PIE: World Init took: (0.000720s)
+[2023.03.16-06.05.00:297][734]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2023.03.16-06.05.00:309][734]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2023.03.16-06.05.00:309][734]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.03.16-06.05.00:309][734]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.03.16-06.05.00:309][734]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.03.16-06.05.00:309][734]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.03.16-06.05.00:309][734]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.03.16-06.05.00:309][734]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.03.16-06.05.00:310][734]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.03.16-06.05.00:310][734]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.03.16-06.05.00:310][734]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.03.16-06.05.00:310][734]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.03.16-06.05.00:310][734]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.03.16-06.05.00:313][734]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.03.16-06.05.00:334][734]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2023.03.16-06.05.00:334][734]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.03.16-06.05.00:334][734]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.03.16-06.05.00:334][734]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.03.16-06.05.00:335][734]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2023.03.16-06.05.00:335][734]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2023.03.16-06.05.00:337][734]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2023.03.16-06.05.00:337][734]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2023.03.16-06.05.00:337][734]LogInit: FAudioDevice initialized.
+[2023.03.16-06.05.00:337][734]LogAudio: Display: Audio Device (ID: 5) registered with world 'TopDownExampleMap'.
+[2023.03.16-06.05.00:357][734]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.03.16-06.05.00:358][734]LogLoad: Game class is 'TopDownShmupGameMode'
+[2023.03.16-06.05.00:359][734]LogWorld: Bringing World /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap up for play (max tick rate 0) at 2023.03.15-23.05.00
+[2023.03.16-06.05.00:359][734]LogWorld: Bringing up level for play took: 0.001688
+[2023.03.16-06.05.00:361][734]LogOnline: OSS: Created online subsystem instance for: :Context_11
+[2023.03.16-06.05.00:363][734]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2023.03.16-06.05.00:363][734]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2023.03.16-06.05.00:363][734]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2023.03.16-06.05.00:364][734]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2023.03.16-06.05.00:365][734]PIE: Server logged in
+[2023.03.16-06.05.00:367][734]PIE: Play in editor total start time 0.121 seconds.
+[2023.03.16-06.05.00:406][734]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.03.16-06.05.11:455][985]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.03.16-06.05.11:455][985]LogWorld: BeginTearingDown for /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap
+[2023.03.16-06.05.11:455][985]LogSlate: Window 'TopDownShmup Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.03.16-06.05.11:458][985]LogWorld: UWorld::CleanupWorld for TopDownExampleMap, bSessionEnded=true, bCleanupResources=true
+[2023.03.16-06.05.11:458][985]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.03.16-06.05.11:468][985]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.03.16-06.05.11:472][985]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.03.16-06.05.11:495][985]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.03.16-06.05.11:496][985]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2023.03.16-06.05.11:498][985]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2023.03.16-06.05.11:509][985]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2023.03.16-06.05.11:529][986]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2023.03.16-06.05.48:627][397]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2023.03.16-06.05.48:627][397]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/TopDownCPP/Maps/TopDownExampleMap' took 0.020
+[2023.03.16-06.05.48:628][397]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/TopDownCPP/Blueprints/BP_AssaultWeapon] ([2] browsable assets)...
+[2023.03.16-06.05.48:654][397]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/TopDownCPP/Blueprints/BP_AssaultWeapon.BP_AssaultWeapon]
+[2023.03.16-06.05.48:654][397]OBJ SavePackage: Finished generating thumbnails for package [/Game/TopDownCPP/Blueprints/BP_AssaultWeapon]
+[2023.03.16-06.05.48:663][397]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/TopDownCPP/Blueprints/BP_AssaultWeapon_Auto2
+[2023.03.16-06.05.48:663][397]LogSavePackage: Moving '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Saved/BP_AssaultWeapon_Auto27C2C47AA47266950835DA8B0D9C4675C.tmp' to '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Saved/Autosaves/Game/TopDownCPP/Blueprints/BP_AssaultWeapon_Auto2.uasset'
+[2023.03.16-06.05.48:666][397]LogFileHelpers: Auto-saving content packages took 0.038
+[2023.03.16-06.06.01:748][503]LogLiveCoding: Display: Starting Live Coding compile.
+[2023.03.16-06.06.31:932][ 26]LogLiveCoding: Display:    Creating library C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_4.lib and object C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_4.exp
+[2023.03.16-06.06.32:540][ 89]LogClass: /Script/TopDownShmup Reload.
+[2023.03.16-06.06.32:540][ 89]LogClass: AssaultWeapon Reload.
+[2023.03.16-06.06.32:540][ 89]LogClass: Weapon Reload.
+[2023.03.16-06.06.32:544][ 89]LogClass: Could not find existing class AssaultWeapon in package /Script/TopDownShmup for reload, assuming new or modified class
+[2023.03.16-06.06.32:544][ 89]LogClass: Could not find existing class Weapon in package /Script/TopDownShmup for reload, assuming new or modified class
+[2023.03.16-06.06.32:554][ 89]Re-instancing AssaultWeapon after reload.
+[2023.03.16-06.06.32:579][ 89]Re-instancing Weapon after reload.
+[2023.03.16-06.06.32:718][ 89]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2023.03.16-06.06.32:977][ 90]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes changed, 2 classes unchanged
+[2023.03.16-06.06.32:977][ 90]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2023.03.16-06.06.36:084][402]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.03.16-06.06.36:097][402]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.03.16-06.06.36:097][402]PIE: New page: PIE session: TopDownExampleMap (Mar 15, 2023, 4:06:36 PM)
+[2023.03.16-06.06.36:097][402]LogPlayLevel: Creating play world package: /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap
+[2023.03.16-06.06.36:101][402]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004475s)
+[2023.03.16-06.06.36:101][402]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/TopDownCPP/Maps/TopDownExampleMap.TopDownExampleMap to /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap (0.004546s)
+[2023.03.16-06.06.36:101][402]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.03.16-06.06.36:101][402]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.03.16-06.06.36:102][402]LogAIModule: Creating AISystem for world TopDownExampleMap
+[2023.03.16-06.06.36:102][402]LogPlayLevel: PIE: World Init took: (0.000739s)
+[2023.03.16-06.06.36:152][402]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2023.03.16-06.06.36:158][402]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2023.03.16-06.06.36:158][402]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.03.16-06.06.36:158][402]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.03.16-06.06.36:158][402]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.03.16-06.06.36:158][402]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.03.16-06.06.36:158][402]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.03.16-06.06.36:158][402]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.03.16-06.06.36:158][402]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.03.16-06.06.36:158][402]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.03.16-06.06.36:158][402]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.03.16-06.06.36:159][402]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.03.16-06.06.36:159][402]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.03.16-06.06.36:160][402]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.03.16-06.06.36:181][402]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2023.03.16-06.06.36:181][402]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.03.16-06.06.36:181][402]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.03.16-06.06.36:181][402]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.03.16-06.06.36:182][402]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2023.03.16-06.06.36:182][402]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2023.03.16-06.06.36:183][402]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2023.03.16-06.06.36:183][402]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2023.03.16-06.06.36:183][402]LogInit: FAudioDevice initialized.
+[2023.03.16-06.06.36:183][402]LogAudio: Display: Audio Device (ID: 6) registered with world 'TopDownExampleMap'.
+[2023.03.16-06.06.36:200][402]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.03.16-06.06.36:200][402]LogLoad: Game class is 'TopDownShmupGameMode'
+[2023.03.16-06.06.36:201][402]LogWorld: Bringing World /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap up for play (max tick rate 0) at 2023.03.15-23.06.36
+[2023.03.16-06.06.36:201][402]LogWorld: Bringing up level for play took: 0.001668
+[2023.03.16-06.06.36:204][402]LogOnline: OSS: Created online subsystem instance for: :Context_12
+[2023.03.16-06.06.36:205][402]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2023.03.16-06.06.36:205][402]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2023.03.16-06.06.36:205][402]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2023.03.16-06.06.36:205][402]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2023.03.16-06.06.36:206][402]PIE: Server logged in
+[2023.03.16-06.06.36:208][402]PIE: Play in editor total start time 0.111 seconds.
+[2023.03.16-06.06.36:245][402]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.03.16-06.06.46:294][430]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.03.16-06.06.46:294][430]LogWorld: BeginTearingDown for /Game/TopDownCPP/Maps/UEDPIE_0_TopDownExampleMap
+[2023.03.16-06.06.46:296][430]LogSlate: Window 'TopDownShmup Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.03.16-06.06.46:298][430]LogWorld: UWorld::CleanupWorld for TopDownExampleMap, bSessionEnded=true, bCleanupResources=true
+[2023.03.16-06.06.46:299][430]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.03.16-06.06.46:317][430]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.03.16-06.06.46:323][430]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.03.16-06.06.46:345][430]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.03.16-06.06.46:353][430]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2023.03.16-06.06.46:356][430]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2023.03.16-06.06.46:392][430]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2023.03.16-06.06.46:428][431]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2023.03.16-06.06.57:865][ 56]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2023.03.16-06.06.57:893][ 56]LogSavePackage: Moving output files for package: /Game/TopDownCPP/Blueprints/BP_AssaultWeapon
+[2023.03.16-06.06.57:894][ 56]LogSavePackage: Moving '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Saved/BP_AssaultWeapon132DDE3147EE11D7651FE799E902673E.tmp' to '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Content/TopDownCPP/Blueprints/BP_AssaultWeapon.uasset'
+[2023.03.16-06.06.57:904][ 56]AssetCheck: New page: Asset Save: BP_AssaultWeapon
+[2023.03.16-06.06.57:904][ 56]LogContentValidation: Display: Validating Blueprint /Game/TopDownCPP/Blueprints/BP_AssaultWeapon.BP_AssaultWeapon

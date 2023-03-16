@@ -7,6 +7,7 @@
 #include "Sound/SoundCue.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/AudioComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "Weapon.generated.h"
 
 UCLASS()
@@ -31,6 +32,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Sound)
 	USoundCue* FireFinishSound;
 
+	// muzzle flash
+	UPROPERTY(EditDefaultsOnly, Category = Effects)
+	UParticleSystem* MuzzleFX;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -39,6 +44,10 @@ protected:
 	UPROPERTY(Transient)
 	UAudioComponent* FireAC;
 	UAudioComponent* PlayWeaponSound(USoundCue* Sound);
+
+	// muzzle flash
+	UPROPERTY(Transient)
+	UParticleSystemComponent* MuzzleFlash;
 
 public:	
 	// Called every frame

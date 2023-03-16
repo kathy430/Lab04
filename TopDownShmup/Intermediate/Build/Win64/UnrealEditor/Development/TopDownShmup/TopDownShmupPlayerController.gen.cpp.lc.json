@@ -43,6 +43,13 @@
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\audiomixer\\audiomixerclockhandle.generated.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\audiomixer\\public\\quartz\\audiomixerquantizedcommands.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\audiocomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystemcomponent.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystem.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\particleperfstats.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\particlesystem.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\emitter.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\emitter.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\particlesystemcomponent.generated.h",
             "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\weapon.generated.h",
             "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\topdownshmupcharacter.generated.h",
             "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\topdownshmupplayercontroller.generated.h"
