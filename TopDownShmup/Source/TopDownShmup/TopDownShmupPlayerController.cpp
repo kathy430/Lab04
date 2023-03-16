@@ -19,6 +19,9 @@ void ATopDownShmupPlayerController::PlayerTick(float DeltaTime)
 	{
 		//MoveToMouseCursor();
 	}
+
+	// update actor rotation based on mouse
+	UpdateMouseLook();
 }
 
 void ATopDownShmupPlayerController::SetupInputComponent()
@@ -125,8 +128,14 @@ void ATopDownShmupPlayerController::UpdateMouseLook()
 		GetHitResultUnderCursor(ECC_Visibility, false, Hit);
 		if (Hit.bBlockingHit)
 		{
+			// get new direction
 			FVector newDirection = Hit.ImpactPoint - Pawn->GetActorLocation();
+			newDirection.Z = 0.0f;
+			newDirection = newDirection.GetSafeNormal();
 
+			// get new rotation and set it
+			FRotator newRotation = newDirection.Rotation();
+			Pawn->SetActorRotation(newRotation);
 		}
 	}
 }
