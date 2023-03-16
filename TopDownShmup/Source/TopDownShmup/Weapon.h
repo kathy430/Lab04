@@ -15,8 +15,8 @@ public:
 	// Sets default values for this actor's properties
 	AWeapon();
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
-		USkeletalMeshComponent* WeaponMesh;
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Weapon)
+	USkeletalMeshComponent* WeaponMesh;
 
 	virtual void OnStartFire();
 	virtual void OnStopFire();
