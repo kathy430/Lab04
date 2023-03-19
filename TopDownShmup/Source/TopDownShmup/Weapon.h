@@ -36,6 +36,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Effects)
 	UParticleSystem* MuzzleFX;
 
+	// my pawn
+	APawn* MyPawn;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

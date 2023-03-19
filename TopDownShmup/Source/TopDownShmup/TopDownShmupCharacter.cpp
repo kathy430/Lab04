@@ -60,6 +60,9 @@ void ATopDownShmupCharacter::BeginPlay()
 				// This is attached to "WeaponPoint" which is defined in the skeleton
 				// NOTE: This should probably be a blueprint parameter
 				MyWeapon->WeaponMesh->AttachToComponent(GetMesh(), FAttachmentTransformRules(EAttachmentRule::KeepRelative, true), TEXT("WeaponPoint"));
+
+				// set owner of the weapon 
+				MyWeapon->MyPawn = this;
 			}
 		}
 	}
