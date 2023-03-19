@@ -951,3 +951,9 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2023.03.19-23.16.21:261][251]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
 [2023.03.19-23.16.21:469][252]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 1 class unchanged
 [2023.03.19-23.16.21:469][252]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2023.03.19-23.32.58:309][490]LogLiveCoding: Display: Starting Live Coding compile.
+[2023.03.19-23.33.12:359][175]LogLiveCoding: Display:    Creating library C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_3.lib and object C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_3.exp
+[2023.03.19-23.33.12:687][206]Re-instancing DwarfCharacter after reload.
+[2023.03.19-23.33.12:986][206]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2023.03.19-23.33.13:212][207]Display: Reload/Re-instancing Complete: 1 package changed, 3 classes unchanged
+[2023.03.19-23.33.13:212][207]LogLiveCoding: Display: Live coding succeeded

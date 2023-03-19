@@ -3,3 +3,8 @@
 
 #include "DwarfCharacter.h"
 
+// sets default values
+ADwarfCharacter::ADwarfCharacter()
+{
+	AIControllerClass = AAIDwarfController::StaticClass();
+}

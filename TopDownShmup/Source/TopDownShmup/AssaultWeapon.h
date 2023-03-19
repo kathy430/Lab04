@@ -17,6 +17,7 @@ class TOPDOWNSHMUP_API AAssaultWeapon : public AWeapon
 	GENERATED_BODY()
 
 public:
+	// sets default values
 	AAssaultWeapon();
 
 	// override OnStartFire() and OnStopFire()
