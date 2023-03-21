@@ -3,24 +3,52 @@
 
 #include "AIDwarfController.h"
 
-void AAIDwarfController::OnPossess(APawn* Pawn)
-{
-	Super::OnPossess(Pawn);
-
-	// store pointer to current pawn
-	MyDwarf = Pawn;
-}
-
+// called when the game starts or when spawned
 void AAIDwarfController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// get player's pawn
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	// tell dwarf to move towards player
-	MoveToActor(PlayerPawn);
+	// set dwarf to start state
+	SetCurrentDwarfState(EDwarfState::EStart);
 }
 
+//  called every frame
+void AAIDwarfController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	
+	// if current state is start
+	if (GetCurrentDwarfState()==EDwarfState::EStart)
+	{
+		// change current state to chasing
+		SetCurrentDwarfState(EDwarfState::EChasing);
+	}
+
+	// if current state is attack
+	if (GetCurrentDwarfState()==EDwarfState::EAttacking)
+	{
+		// get current distance between the player and dwarf
+		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+		CurrentRange = (PlayerPawn->GetActorLocation() - MyDwarf->GetActorLocation()).Size();
+		// if range is larger than max range
+		if (CurrentRange > MaxRange)
+		{
+			// change current state to chase
+			SetCurrentDwarfState(EDwarfState::EChasing);
+		}
+	}
+}
+
+void AAIDwarfController::OnPossess(APawn* Pawn)
+{
+	Super::OnPossess(Pawn);
+
+	// store pointer to current dwarf
+	MyDwarf = Pawn;
+}
+
+// change what the dwarf does after reaching the player's pawn
 void AAIDwarfController::OnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result)
 {
 	Super::OnMoveCompleted(RequestID, Result);
@@ -29,14 +57,61 @@ void AAIDwarfController::OnMoveCompleted(FAIRequestID RequestID, EPathFollowingR
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, FString::Printf(TEXT("move completed")));
 	}
+
+	// change current state to attack
+	SetCurrentDwarfState(EDwarfState::EAttacking);
 }
 
+// returns current dwarf state
 EDwarfState AAIDwarfController::GetCurrentDwarfState() const
 {
 	return CurrentDwarfState;
 }
 
+// sets new dwarf state
 void AAIDwarfController::SetCurrentDwarfState(EDwarfState NewState)
 {
+	// set new state
 	CurrentDwarfState = NewState;
+
+	// handle new state
+	HandleNewState(CurrentDwarfState);
+}
+
+void AAIDwarfController::HandleNewState(EDwarfState NewState)
+{
+	switch (NewState)
+	{
+		case EDwarfState::EStart:
+		{
+
+		}
+		break;
+		case EDwarfState::EChasing:
+		{
+			// tell dwarf to move to player's pawn
+			APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+			MoveToActor(PlayerPawn);
+		}
+		break;
+		case EDwarfState::EAttacking:
+		{
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Attacking")));
+			}
+		}
+		break;
+		case EDwarfState::EDead:
+		{
+
+		}
+		break;
+		default:
+		case EDwarfState::EUnknown:
+		{
+
+		}
+		break;
+	}
 }

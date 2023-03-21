@@ -23,11 +23,11 @@ class TOPDOWNSHMUP_API AAIDwarfController : public AAIEnemyController
 	GENERATED_BODY()
 	
 public:
+	// called every frame
+	virtual void Tick(float DeltaTime) override;
+
 	// override OnPossess function
 	virtual void OnPossess(APawn* Pawn) override;
-
-	// override BeginPlay function
-	virtual void BeginPlay() override;
 
 	// override OnMoveCompleted function
 	virtual void OnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result) override;
@@ -41,6 +41,17 @@ public:
 	// pointer to dwarf
 	APawn* MyDwarf;
 
+protected:
+	// override BeginPlay function
+	virtual void BeginPlay() override;
+
 private:
 	EDwarfState CurrentDwarfState;
+
+	// handle new dwarf states
+	void HandleNewState(EDwarfState NewState);
+
+	// variables to keep track of range between dwarf and player
+	float MaxRange = 150.0f;
+	float CurrentRange;
 };
