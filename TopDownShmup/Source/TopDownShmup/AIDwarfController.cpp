@@ -30,3 +30,13 @@ void AAIDwarfController::OnMoveCompleted(FAIRequestID RequestID, EPathFollowingR
 		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, FString::Printf(TEXT("move completed")));
 	}
 }
+
+EDwarfState AAIDwarfController::GetCurrentDwarfState() const
+{
+	return CurrentDwarfState;
+}
+
+void AAIDwarfController::SetCurrentDwarfState(EDwarfState NewState)
+{
+	CurrentDwarfState = NewState;
+}

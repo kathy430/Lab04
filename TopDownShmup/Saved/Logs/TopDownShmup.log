@@ -1601,3 +1601,16 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2023.03.21-00.14.03:804][178]LogFileHelpers: Saving map 'TopDownExampleMap' took 0.055
 [2023.03.21-00.14.03:815][178]AssetCheck: New page: Asset Save: TopDownExampleMap
 [2023.03.21-00.14.03:815][178]LogContentValidation: Display: Validating World /Game/TopDownCPP/Maps/TopDownExampleMap.TopDownExampleMap
+[2023.03.21-00.30.01:619][470]LogDerivedDataCache: C:/Users/itsca/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.295 and deleted 0 file(s) with total size 0 MiB.
+[2023.03.21-00.44.40:483][373]LogLiveCoding: Display: Starting Live Coding compile.
+[2023.03.21-00.44.49:750][461]Display: Reload/Re-instancing Complete: No object changes detected
+[2023.03.21-00.44.49:750][461]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2023.03.21-00.46.33:185][480]LogLiveCoding: Display: Starting Live Coding compile.
+[2023.03.21-00.46.40:834][375]LogLiveCoding: Display:    Creating library C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_4.lib and object C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Binaries\Win64\UnrealEditor-TopDownShmup.patch_4.exp
+[2023.03.21-00.46.41:406][436]LogClass: /Script/TopDownShmup Reload.
+[2023.03.21-00.46.41:406][436]LogClass: AIDwarfController Reload.
+[2023.03.21-00.46.41:407][436]LogClass: Could not find existing class AIDwarfController in package /Script/TopDownShmup for reload, assuming new or modified class
+[2023.03.21-00.46.41:418][436]Re-instancing AIDwarfController after reload.
+[2023.03.21-00.46.41:574][436]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2023.03.21-00.46.41:859][437]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 1 class unchanged
+[2023.03.21-00.46.41:859][437]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types

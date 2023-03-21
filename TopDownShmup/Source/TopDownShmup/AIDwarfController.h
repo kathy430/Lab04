@@ -10,6 +10,13 @@
 /**
  * 
  */
+
+// all possible dwarf states
+enum class EDwarfState : short
+{
+	EStart, EChasing, EAttacking, EDead, EUnknown
+};
+
 UCLASS()
 class TOPDOWNSHMUP_API AAIDwarfController : public AAIEnemyController
 {
@@ -25,6 +32,15 @@ public:
 	// override OnMoveCompleted function
 	virtual void OnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result) override;
 
+	// get current dwarf state
+	EDwarfState GetCurrentDwarfState() const;
+
+	// set current dwarf state
+	void SetCurrentDwarfState(EDwarfState NewState);
+
 	// pointer to dwarf
 	APawn* MyDwarf;
+
+private:
+	EDwarfState CurrentDwarfState;
 };

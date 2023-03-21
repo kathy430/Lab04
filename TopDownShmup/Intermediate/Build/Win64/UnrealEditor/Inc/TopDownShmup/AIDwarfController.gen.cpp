@@ -37,7 +37,6 @@ void EmptyLinkFunctionForGeneratedCodeAIDwarfController() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIDwarfController_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Collision Rendering Transformation" },
 		{ "IncludePath", "AIDwarfController.h" },
 		{ "ModuleRelativePath", "AIDwarfController.h" },
@@ -79,9 +78,9 @@ void EmptyLinkFunctionForGeneratedCodeAIDwarfController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AAIDwarfController, AAIDwarfController::StaticClass, TEXT("AAIDwarfController"), &Z_Registration_Info_UClass_AAIDwarfController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAIDwarfController), 2710576330U) },
+		{ Z_Construct_UClass_AAIDwarfController, AAIDwarfController::StaticClass, TEXT("AAIDwarfController"), &Z_Registration_Info_UClass_AAIDwarfController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAIDwarfController), 1126610469U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_2369780631(TEXT("/Script/TopDownShmup"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_2985818206(TEXT("/Script/TopDownShmup"),
 		Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
