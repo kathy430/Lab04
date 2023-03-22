@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Sound/SoundCue.h"
-#include "Kismet/GameplayStatics.h"
 #include "Components/AudioComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Weapon.generated.h"

@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "AIEnemyController.h"
-#include "Kismet/GameplayStatics.h"
 #include "AIDwarfController.generated.h"
 
 /**
@@ -38,8 +37,8 @@ public:
 	// set current dwarf state
 	void SetCurrentDwarfState(EDwarfState NewState);
 
-	// pointer to dwarf
-	APawn* MyDwarf;
+	// pointer to dwarf pawn
+	APawn* DwarfPawn;
 
 protected:
 	// override BeginPlay function

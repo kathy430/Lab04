@@ -2,6 +2,7 @@
 
 
 #include "AssaultWeapon.h"
+#include "Kismet/GameplayStatics.h"
 
 // sets default values
 AAssaultWeapon::AAssaultWeapon()

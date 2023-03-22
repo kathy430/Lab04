@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "EnemyCharacter.h"
-#include "AIDwarfController.h"
 #include "DwarfCharacter.generated.h"
 
 /**
@@ -18,4 +17,10 @@ class TOPDOWNSHMUP_API ADwarfCharacter : public AEnemyCharacter
 public:
 	// sets default values for this character's properties
 	ADwarfCharacter();
+
+	UPROPERTY(EditDefaultsOnly)
+	UAnimMontage* AttackAnim;
+
+	void StartAttack();
+	void StopAttack();
 };

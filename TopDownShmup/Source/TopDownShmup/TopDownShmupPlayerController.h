@@ -1,7 +1,6 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/PlayerController.h"
-#include "TopDownShmupCharacter.h"
 #include "TopDownShmupPlayerController.generated.h"
 
 UCLASS()

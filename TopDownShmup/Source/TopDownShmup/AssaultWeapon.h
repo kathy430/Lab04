@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "Weapon.h"
 #include "TimerManager.h"
-#include "Kismet/GameplayStatics.h"
 #include "AssaultWeapon.generated.h"
 
 /**

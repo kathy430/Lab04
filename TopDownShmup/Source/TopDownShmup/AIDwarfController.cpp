@@ -2,6 +2,8 @@
 
 
 #include "AIDwarfController.h"
+#include "Kismet/GameplayStatics.h"
+#include "DwarfCharacter.h"
 
 // called when the game starts or when spawned
 void AAIDwarfController::BeginPlay()
@@ -30,10 +32,14 @@ void AAIDwarfController::Tick(float DeltaTime)
 	{
 		// get current distance between the player and dwarf
 		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-		CurrentRange = (PlayerPawn->GetActorLocation() - MyDwarf->GetActorLocation()).Size();
+		CurrentRange = (PlayerPawn->GetActorLocation() - DwarfPawn->GetActorLocation()).Size();
 		// if range is larger than max range
 		if (CurrentRange > MaxRange)
 		{
+			// cast pawn to dwarf character to stop attack animation
+			ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
+			MyDwarf->StopAttack();
+
 			// change current state to chase
 			SetCurrentDwarfState(EDwarfState::EChasing);
 		}
@@ -45,7 +51,7 @@ void AAIDwarfController::OnPossess(APawn* Pawn)
 	Super::OnPossess(Pawn);
 
 	// store pointer to current dwarf
-	MyDwarf = Pawn;
+	DwarfPawn = Pawn;
 }
 
 // change what the dwarf does after reaching the player's pawn
@@ -96,10 +102,10 @@ void AAIDwarfController::HandleNewState(EDwarfState NewState)
 		break;
 		case EDwarfState::EAttacking:
 		{
-			if (GEngine)
-			{
-				GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Attacking")));
-			}
+			// cast pawn to dwarf character
+			ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
+			// tell dwarf to start attack animation
+			MyDwarf->StartAttack();
 		}
 		break;
 		case EDwarfState::EDead:
