@@ -1199,3 +1199,16 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2023.03.23-02.33.57:323][ 47]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
 [2023.03.23-02.33.57:363][ 48]LogPlayLevel: Display: Destroying online subsystem :Context_12
 [2023.03.23-02.33.57:402][ 48]LogUObjectGlobals: Warning: Failed to find object 'Class None.DestructibleMesh'
+[2023.03.23-02.35.46:033][626]Cmd: DELETE
+[2023.03.23-02.35.46:033][626]Cmd: ACTOR DELETE
+[2023.03.23-02.35.46:075][626]LogEditorActor: Deleted Actor: BP_Dwarf_C
+[2023.03.23-02.35.46:092][626]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2023.03.23-02.35.46:095][626]LogEditorActor: Deleted 1 Actors (0.048 secs)
+[2023.03.23-02.35.50:200][113]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2023.03.23-02.35.50:242][113]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2023.03.23-02.35.50:271][113]LogSavePackage: Moving output files for package: /Game/TopDownCPP/Maps/TopDownExampleMap
+[2023.03.23-02.35.50:272][113]LogSavePackage: Moving '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Saved/TopDownExampleMap2C92D959453744EC30B521BBFC89B71F.tmp' to '../../../../../../Users/itsca/Documents/Unreal Projects/Lab04/TopDownShmup/Content/TopDownCPP/Maps/TopDownExampleMap.umap'
+[2023.03.23-02.35.50:284][113]LogFileHelpers: No new changes to save!
+[2023.03.23-02.35.50:284][113]LogFileHelpers: Saving map 'TopDownExampleMap' took 0.059
+[2023.03.23-02.35.50:297][113]AssetCheck: New page: Asset Save: TopDownExampleMap
+[2023.03.23-02.35.50:297][113]LogContentValidation: Display: Validating World /Game/TopDownCPP/Maps/TopDownExampleMap.TopDownExampleMap
