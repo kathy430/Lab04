@@ -36,7 +36,7 @@ public: \
 
 #define FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AAIDwarfController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AAIDwarfController(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAIDwarfController) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AAIDwarfController); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAIDwarfController); \
@@ -48,8 +48,6 @@ public:
 
 
 #define FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_22_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AAIDwarfController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AAIDwarfController(AAIDwarfController&&); \
@@ -57,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AAIDwarfController); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAIDwarfController); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAIDwarfController)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAIDwarfController)
 
 
 #define FID_TopDownShmup_Source_TopDownShmup_AIDwarfController_h_19_PROLOG

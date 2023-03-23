@@ -3,12 +3,14 @@
 
 #include "AssaultWeapon.h"
 #include "Kismet/GameplayStatics.h"
+#include "DwarfCharacter.h"
 
 // sets default values
 AAssaultWeapon::AAssaultWeapon()
 {
 	FireRate = 0.05f;
 	WeaponRange = 10000.0f;
+	AttackDamage = 2.0f;
 }
 
 // override on start fire
@@ -53,5 +55,12 @@ void AAssaultWeapon::WeaponTrace()
 	{
 		// spawn impact particle at hit location
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitEffect, Hit.Location);
+
+		// if dwarf was hit, reduce it's health
+		ADwarfCharacter* Dwarf = Cast<ADwarfCharacter>(Hit.GetActor());
+		if (Dwarf)
+		{
+			Dwarf->TakeDamage(AttackDamage, FDamageEvent(), GetInstigatorController(), this);
+		}
 	}
 }

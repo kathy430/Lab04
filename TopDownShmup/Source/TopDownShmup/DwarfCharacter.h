@@ -21,6 +21,17 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	UAnimMontage* AttackAnim;
 
+	// attack functions
 	void StartAttack();
 	void StopAttack();
+
+	// override TakeDamage
+	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+private:
+	UPROPERTY(EditAnywhere)
+	float Health;
+
+	UPROPERTY(EditAnywhere)
+	float AttackDamage;
 };

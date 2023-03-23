@@ -22,7 +22,12 @@ public:
 	// override OnStartFire() and OnStopFire()
 	virtual void OnStartFire() override;
 	virtual void OnStopFire() override;
-	
+
+protected:
+	// fires a ray from assault rifle
+	void WeaponTrace();
+
+private:
 	// assault weapon firing
 	UPROPERTY(EditAnywhere)
 	float FireRate;
@@ -31,8 +36,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Effects)
 	UParticleSystem* HitEffect;
 
-protected:
-	// fires a ray from assault rifle
-	void WeaponTrace();
 	FTimerHandle WeaponTimerHandle;
+
+	UPROPERTY(EditAnywhere)
+	float AttackDamage;
 };

@@ -22,6 +22,9 @@ class TOPDOWNSHMUP_API AAIDwarfController : public AAIEnemyController
 	GENERATED_BODY()
 	
 public:
+	// sets default values for this controller's properties
+	AAIDwarfController();
+
 	// called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -40,6 +43,10 @@ public:
 	// pointer to dwarf pawn
 	APawn* DwarfPawn;
 
+	// max range between a dwarf and a player
+	UPROPERTY(EditAnywhere)
+	float MaxRange;
+
 protected:
 	// override BeginPlay function
 	virtual void BeginPlay() override;
@@ -51,6 +58,5 @@ private:
 	void HandleNewState(EDwarfState NewState);
 
 	// variables to keep track of range between dwarf and player
-	float MaxRange = 150.0f;
 	float CurrentRange;
 };

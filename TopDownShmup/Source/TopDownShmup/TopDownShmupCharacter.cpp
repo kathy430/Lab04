@@ -32,6 +32,7 @@ ATopDownShmupCharacter::ATopDownShmupCharacter()
 	TopDownCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	TopDownCameraComponent->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
+	Health = 100.0f;
 }
 
 void ATopDownShmupCharacter::BeginPlay()
@@ -87,3 +88,10 @@ void ATopDownShmupCharacter::OnStopFire()
 		MyWeapon->OnStopFire();
 	}
 }
+
+/*
+float ATopDownShmupCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	
+}
+*/

@@ -5,6 +5,12 @@
 #include "Kismet/GameplayStatics.h"
 #include "DwarfCharacter.h"
 
+// sets default values for the AI dwarf controller
+AAIDwarfController::AAIDwarfController()
+{
+	MaxRange = 150.0f;
+}
+
 // called when the game starts or when spawned
 void AAIDwarfController::BeginPlay()
 {
