@@ -2,6 +2,7 @@
 
 
 #include "AssaultWeapon.h"
+#include "TimerManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "DwarfCharacter.h"
 

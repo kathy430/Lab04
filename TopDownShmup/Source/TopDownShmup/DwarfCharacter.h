@@ -34,4 +34,6 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float AttackDamage;
+
+	FTimerHandle AttackTimerHandle;
 };
