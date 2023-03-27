@@ -20,7 +20,6 @@ void ADwarfCharacter::StartAttack()
 {
 	// set timer to damage 
 	GetWorldTimerManager().SetTimer(AttackTimerHandle, this, &ADwarfCharacter::AttackPlayer, PlayAnimMontage(AttackAnim), true);
-	//PlayAnimMontage(AttackAnim);
 }
 
 // stop dwarf attack

@@ -49,12 +49,17 @@ void AAIDwarfController::Tick(float DeltaTime)
 
 			// change current state to chase
 			SetCurrentDwarfState(EDwarfState::EChasing);
+		}
 
-			// cast player pawn to a top down shmup character
-			ATopDownShmupCharacter* ThePlayer = Cast<ATopDownShmupCharacter>(PlayerPawn);
-			// if player is dead, stop attack animation
+		// cast player pawn to a top down shmup character
+		ATopDownShmupCharacter* ThePlayer = Cast<ATopDownShmupCharacter>(PlayerPawn);
+		// if player is dead, stop attack animation
+		if (ThePlayer)
+		{
 			if (ThePlayer->IsDead())
 			{
+				// cast pawn to dwarf character to stop attack animation
+				ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
 				MyDwarf->StopAttack();
 			}
 		}
