@@ -3,6 +3,9 @@
 
 #include "DwarfCharacter.h"
 #include "AIDwarfController.h"
+#include "TimerManager.h"
+#include "Kismet/GameplayStatics.h"
+#include "TopDownShmupCharacter.h"
 
 // sets default values
 ADwarfCharacter::ADwarfCharacter()
@@ -15,13 +18,29 @@ ADwarfCharacter::ADwarfCharacter()
 // start dwarf attack
 void ADwarfCharacter::StartAttack()
 {
-	PlayAnimMontage(AttackAnim);
+	// set timer to damage 
+	GetWorldTimerManager().SetTimer(AttackTimerHandle, this, &ADwarfCharacter::AttackPlayer, PlayAnimMontage(AttackAnim), true);
+	//PlayAnimMontage(AttackAnim);
 }
 
 // stop dwarf attack
 void ADwarfCharacter::StopAttack()
 {
 	StopAnimMontage();
+	GetWorldTimerManager().ClearTimer(AttackTimerHandle);
+}
+
+// attack player and call take damage on player
+void ADwarfCharacter::AttackPlayer()
+{
+	// get player character
+	ATopDownShmupCharacter* PlayerCharacter = Cast<ATopDownShmupCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+
+	// call take damage if player exists
+	if (PlayerCharacter)
+	{
+		PlayerCharacter->TakeDamage(AttackDamage, FDamageEvent(), GetInstigatorController(), this);
+	}
 }
 
 float ADwarfCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -46,11 +65,6 @@ float ADwarfCharacter::TakeDamage(float Damage, struct FDamageEvent const& Damag
 			// Stop attack animation,
 			StopAttack();
 			// Unposses the AI controller,
-			AController* AIController = GetController();
-			if (AIController)
-			{
-				AIController->UnPossess();
-			}
 			// Remove the dwarf from the world
 			Destroy();
 		}

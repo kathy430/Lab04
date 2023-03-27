@@ -33,6 +33,7 @@ ATopDownShmupCharacter::ATopDownShmupCharacter()
 	TopDownCameraComponent->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
 	Health = 100.0f;
+	Dead = false;
 }
 
 void ATopDownShmupCharacter::BeginPlay()
@@ -89,9 +90,39 @@ void ATopDownShmupCharacter::OnStopFire()
 	}
 }
 
-/*
+
 float ATopDownShmupCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	
+	float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+
+	if (ActualDamage > 0.0f)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(4, 1.0f, FColor::Red, FString::Printf(TEXT("Player hit!Current health : %f / 100"), Health));
+		}
+
+		// Reduce health points
+		Health -= ActualDamage;
+		if (Health < 0.0f)
+		{
+			// We're dead
+			Dead = true;
+			SetCanBeDamaged(false); // Don't allow further damage
+			OnStopFire(); // stop firing when dead
+			APlayerController* PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+			if (PlayerController)
+			{
+				PlayerController->SetIgnoreLookInput(true);
+				PlayerController->SetIgnoreMoveInput(true);
+			}
+		}
+	}
+
+	return ActualDamage;
 }
-*/
+
+bool ATopDownShmupCharacter::IsDead()
+{
+	return Dead;
+}

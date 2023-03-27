@@ -24,9 +24,14 @@ public:
 	// attack functions
 	void StartAttack();
 	void StopAttack();
+	void AttackPlayer();
 
 	// override TakeDamage
 	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+	// death animation
+	UPROPERTY(EditDefaultsOnly)
+	UAnimMontage* DeathAnim;
 
 private:
 	UPROPERTY(EditAnywhere)

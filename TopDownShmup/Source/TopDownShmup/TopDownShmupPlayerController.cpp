@@ -114,6 +114,12 @@ void ATopDownShmupPlayerController::MoveRight(float Value)
 // changes the direction the character faces based on mouse location
 void ATopDownShmupPlayerController::UpdateMouseLook()
 {
+	if (IsLookInputIgnored())
+	{
+		// if look input is ignored leave function
+		return;
+	}
+	
 	APawn* const Pawn = GetPawn();
 	if (Pawn)
 	{
@@ -142,6 +148,12 @@ void ATopDownShmupPlayerController::OnStartFire()
 	{
 		// cast to character class type
 		ATopDownShmupCharacter* MyCharacter = Cast<ATopDownShmupCharacter>(Pawn);
+
+		// if player is dead, don't let player fire
+		if (MyCharacter->IsDead())
+		{
+			return;
+		}
 		MyCharacter->OnStartFire();
 	}
 }
@@ -155,6 +167,12 @@ void ATopDownShmupPlayerController::OnStopFire()
 	{
 		// cast to character class type
 		ATopDownShmupCharacter* MyCharacter = Cast<ATopDownShmupCharacter>(Pawn);
+
+		//  if player is dead, don't let player fire/stop firing
+		if (MyCharacter->IsDead())
+		{
+			return;
+		}
 		MyCharacter->OnStopFire();
 	}
 }

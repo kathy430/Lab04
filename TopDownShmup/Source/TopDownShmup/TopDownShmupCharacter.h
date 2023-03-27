@@ -33,7 +33,9 @@ public:
 	void OnStopFire();
 
 	// override TakeDamage
-	//virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+	bool IsDead();
 
 protected:
 	// Called when the game starts or when spawned
@@ -44,5 +46,7 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float Health;
+
+	bool Dead;
 };
 

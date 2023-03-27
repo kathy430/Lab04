@@ -4,6 +4,7 @@
 #include "AIDwarfController.h"
 #include "Kismet/GameplayStatics.h"
 #include "DwarfCharacter.h"
+#include "TopDownShmupCharacter.h"
 
 // sets default values for the AI dwarf controller
 AAIDwarfController::AAIDwarfController()
@@ -48,6 +49,14 @@ void AAIDwarfController::Tick(float DeltaTime)
 
 			// change current state to chase
 			SetCurrentDwarfState(EDwarfState::EChasing);
+
+			// cast player pawn to a top down shmup character
+			ATopDownShmupCharacter* ThePlayer = Cast<ATopDownShmupCharacter>(PlayerPawn);
+			// if player is dead, stop attack animation
+			if (ThePlayer->IsDead())
+			{
+				MyDwarf->StopAttack();
+			}
 		}
 	}
 }
