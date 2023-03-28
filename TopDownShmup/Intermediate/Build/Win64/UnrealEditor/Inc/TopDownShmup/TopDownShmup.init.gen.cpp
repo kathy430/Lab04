@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeTopDownShmup_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xCE72F97E,
-				0x3297ABE5,
+				0x5644F6EA,
+				0x05E57CF1,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_TopDownShmup.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_TopDownShmup.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopDownShmup(Z_Construct_UPackage__Script_TopDownShmup, TEXT("/Script/TopDownShmup"), Z_Registration_Info_UPackage__Script_TopDownShmup, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xCE72F97E, 0x3297ABE5));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopDownShmup(Z_Construct_UPackage__Script_TopDownShmup, TEXT("/Script/TopDownShmup"), Z_Registration_Info_UPackage__Script_TopDownShmup, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x5644F6EA, 0x05E57CF1));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
