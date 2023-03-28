@@ -64,7 +64,7 @@ float ADwarfCharacter::TakeDamage(float Damage, struct FDamageEvent const& Damag
 			// Stop attack animation,
 			StopAttack();
 			// Remove the dwarf from the world
-			GetWorldTimerManager().SetTimer(DeathTimerHandle, this, &ADwarfCharacter::Dying, PlayAnimMontage(DeathAnim), false);
+			GetWorldTimerManager().SetTimer(DeathTimerHandle, this, &ADwarfCharacter::StartDeath, PlayAnimMontage(DeathAnim), false);
 		}
 	}
 
@@ -72,7 +72,7 @@ float ADwarfCharacter::TakeDamage(float Damage, struct FDamageEvent const& Damag
 }
 
 // destroys dwarf character and stops death animation
-void ADwarfCharacter::Dying()
+void ADwarfCharacter::StartDeath()
 {
 	Destroy();
 	StopAnimMontage(DeathAnim);

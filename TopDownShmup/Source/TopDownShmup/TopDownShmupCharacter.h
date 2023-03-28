@@ -36,6 +36,8 @@ public:
 	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	bool IsDead();
+	UPROPERTY(EditDefaultsOnly)
+	UAnimMontage* DeathAnim;
 
 protected:
 	// Called when the game starts or when spawned

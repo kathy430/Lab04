@@ -32,7 +32,7 @@ public:
 	// death animation
 	UPROPERTY(EditDefaultsOnly)
 	UAnimMontage* DeathAnim;
-	void Dying();
+	void StartDeath();
 
 private:
 	UPROPERTY(EditAnywhere)
