@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "TopDownShmup",
-			"Path": "C:\\Users\\itsca\\Documents\\Unreal Projects\\Lab04\\TopDownShmup\\Source\\TopDownShmup.Target.cs",
+			"Path": "C:\\Users\\Anthony\\Documents\\GitHub\\Lab04\\TopDownShmup\\Source\\TopDownShmup.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "TopDownShmupEditor",
-			"Path": "C:\\Users\\itsca\\Documents\\Unreal Projects\\Lab04\\TopDownShmup\\Source\\TopDownShmupEditor.Target.cs",
+			"Path": "C:\\Users\\Anthony\\Documents\\GitHub\\Lab04\\TopDownShmup\\Source\\TopDownShmupEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
