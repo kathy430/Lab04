@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownShmupCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	TOPDOWNSHMUP_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 // End Cross Module References
 	void ATopDownShmupCharacter::StaticRegisterNativesATopDownShmupCharacter()
 	{
@@ -44,6 +45,10 @@ void EmptyLinkFunctionForGeneratedCodeTopDownShmupCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WeaponClass_MetaData[];
 #endif
 		static const UECodeGen_Private::FClassPropertyParams NewProp_WeaponClass;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DeathAnim_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_DeathAnim;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[];
 #endif
@@ -95,6 +100,15 @@ void EmptyLinkFunctionForGeneratedCodeTopDownShmupCharacter() {}
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_WeaponClass = { "WeaponClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownShmupCharacter, WeaponClass), Z_Construct_UClass_AWeapon_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_WeaponClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_WeaponClass_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_DeathAnim_MetaData[] = {
+		{ "Category", "TopDownShmupCharacter" },
+		{ "Comment", "// death animation\n" },
+		{ "ModuleRelativePath", "TopDownShmupCharacter.h" },
+		{ "ToolTip", "death animation" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_DeathAnim = { "DeathAnim", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownShmupCharacter, DeathAnim), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_DeathAnim_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_DeathAnim_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_Health_MetaData[] = {
 		{ "Category", "TopDownShmupCharacter" },
 		{ "ModuleRelativePath", "TopDownShmupCharacter.h" },
@@ -105,6 +119,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownShmupCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_TopDownCameraComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_WeaponClass,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_DeathAnim,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownShmupCharacter_Statics::NewProp_Health,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATopDownShmupCharacter_Statics::StaticCppClassTypeInfo = {
@@ -143,9 +158,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownShmupCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_TopDownShmupCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownShmupCharacter, ATopDownShmupCharacter::StaticClass, TEXT("ATopDownShmupCharacter"), &Z_Registration_Info_UClass_ATopDownShmupCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownShmupCharacter), 3581972508U) },
+		{ Z_Construct_UClass_ATopDownShmupCharacter, ATopDownShmupCharacter::StaticClass, TEXT("ATopDownShmupCharacter"), &Z_Registration_Info_UClass_ATopDownShmupCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownShmupCharacter), 2278620434U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_TopDownShmupCharacter_h_608863036(TEXT("/Script/TopDownShmup"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_TopDownShmupCharacter_h_1686721465(TEXT("/Script/TopDownShmup"),
 		Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_TopDownShmupCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownShmup_Source_TopDownShmup_TopDownShmupCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

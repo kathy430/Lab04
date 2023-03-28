@@ -116,6 +116,8 @@ float ATopDownShmupCharacter::TakeDamage(float Damage, struct FDamageEvent const
 				PlayerController->SetIgnoreLookInput(true);
 				PlayerController->SetIgnoreMoveInput(true);
 			}
+
+			GetWorldTimerManager().SetTimer(DeathTimerHandle, this, &ATopDownShmupCharacter::StartDeath, PlayAnimMontage(DeathAnim) - 0.25f, false);
 		}
 	}
 
@@ -125,4 +127,11 @@ float ATopDownShmupCharacter::TakeDamage(float Damage, struct FDamageEvent const
 bool ATopDownShmupCharacter::IsDead()
 {
 	return Dead;
+}
+
+void ATopDownShmupCharacter::StartDeath()
+{
+	StopAnimMontage(DeathAnim); // stop animation
+	GetMesh()->Deactivate(); // deactivate skeletal mesh
+	GetWorldTimerManager().ClearTimer(DeathTimerHandle);
 }

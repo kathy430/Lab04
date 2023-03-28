@@ -28,14 +28,14 @@ void AAIDwarfController::Tick(float DeltaTime)
 
 	
 	// if current state is start
-	if (GetCurrentDwarfState()==EDwarfState::EStart)
+	if (GetCurrentDwarfState() == EDwarfState::EStart)
 	{
 		// change current state to chasing
 		SetCurrentDwarfState(EDwarfState::EChasing);
 	}
 
 	// if current state is attack
-	if (GetCurrentDwarfState()==EDwarfState::EAttacking)
+	if (GetCurrentDwarfState() == EDwarfState::EAttacking)
 	{
 		// get current distance between the player and dwarf
 		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
@@ -62,6 +62,14 @@ void AAIDwarfController::Tick(float DeltaTime)
 				ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
 				MyDwarf->StopAttack();
 			}
+		}
+	}
+
+	if (GetCurrentDwarfState() == EDwarfState::EDead)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(6, 1.0f, FColor::Green, FString::Printf(TEXT("Dwarf dead")));
 		}
 	}
 }

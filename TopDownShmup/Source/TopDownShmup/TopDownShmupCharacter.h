@@ -2,6 +2,7 @@
 #pragma once
 #include "GameFramework/Character.h"
 #include "Weapon.h"
+#include "TimerManager.h"
 #include "TopDownShmupCharacter.generated.h"
 
 UCLASS(Blueprintable)
@@ -36,8 +37,11 @@ public:
 	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	bool IsDead();
+
+	// death animation
 	UPROPERTY(EditDefaultsOnly)
 	UAnimMontage* DeathAnim;
+	void StartDeath();
 
 protected:
 	// Called when the game starts or when spawned
@@ -50,5 +54,7 @@ private:
 	float Health;
 
 	bool Dead;
+
+	FTimerHandle DeathTimerHandle;
 };
 

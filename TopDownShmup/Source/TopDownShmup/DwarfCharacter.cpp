@@ -74,7 +74,10 @@ float ADwarfCharacter::TakeDamage(float Damage, struct FDamageEvent const& Damag
 // destroys dwarf character and stops death animation
 void ADwarfCharacter::StartDeath()
 {
-	Destroy();
-	StopAnimMontage(DeathAnim);
+	StopAnimMontage(DeathAnim); // stop animation
+	AAIDwarfController* DwarfController = Cast<AAIDwarfController>(GetController());
+	DwarfController->SetCurrentDwarfState(EDwarfState::EDead); // set dwarf controller state to EDead
+	DwarfController->UnPossess(); // unpossess controller
+	Destroy(); // remove dwarf
 	GetWorldTimerManager().ClearTimer(DeathTimerHandle);
 }
