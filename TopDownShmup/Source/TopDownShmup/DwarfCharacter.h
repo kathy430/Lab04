@@ -33,6 +33,7 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	UAnimMontage* DeathAnim;
 	void StartDeath();
+	bool IsDead();
 
 private:
 	UPROPERTY(EditAnywhere)
@@ -40,6 +41,8 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float AttackDamage;
+
+	bool Dead;
 
 	FTimerHandle AttackTimerHandle;
 	FTimerHandle DeathTimerHandle;

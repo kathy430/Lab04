@@ -26,7 +26,16 @@ void AAIDwarfController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	
+	// cast dwarf pawn to dwarf character
+	ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
+
+	// if dwarf is dead, don't do anything
+	if (MyDwarf->IsDead())
+	{
+		StopMovement();
+		SetCurrentDwarfState(EDwarfState::EDead);
+	}
+
 	// if current state is start
 	if (GetCurrentDwarfState() == EDwarfState::EStart)
 	{
@@ -43,8 +52,7 @@ void AAIDwarfController::Tick(float DeltaTime)
 		// if range is larger than max range
 		if (CurrentRange > MaxRange)
 		{
-			// cast pawn to dwarf character to stop attack animation
-			ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
+			// stop attack animation
 			MyDwarf->StopAttack();
 
 			// change current state to chase
@@ -58,8 +66,7 @@ void AAIDwarfController::Tick(float DeltaTime)
 		{
 			if (ThePlayer->IsDead())
 			{
-				// cast pawn to dwarf character to stop attack animation
-				ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
+				// stop attack animation
 				MyDwarf->StopAttack();
 			}
 		}
@@ -132,13 +139,16 @@ void AAIDwarfController::HandleNewState(EDwarfState NewState)
 		{
 			// cast pawn to dwarf character
 			ADwarfCharacter* MyDwarf = Cast<ADwarfCharacter>(DwarfPawn);
-			// tell dwarf to start attack animation
-			MyDwarf->StartAttack();
+			// tell dwarf to start attack animation if not dead
+			if (!MyDwarf->IsDead())
+			{
+				MyDwarf->StartAttack();
+			}
 		}
 		break;
 		case EDwarfState::EDead:
 		{
-
+			
 		}
 		break;
 		default:

@@ -13,6 +13,7 @@ ADwarfCharacter::ADwarfCharacter()
 	AIControllerClass = AAIDwarfController::StaticClass();
 	Health = 20.0f;
 	AttackDamage = 10.0f;
+	Dead = false;
 }
 
 // start dwarf attack
@@ -61,10 +62,11 @@ float ADwarfCharacter::TakeDamage(float Damage, struct FDamageEvent const& Damag
 			// We're dead
 			SetCanBeDamaged(false); // Don't allow further damage
 			// TODO: Process death
+			Dead = true;
 			// Stop attack animation,
 			StopAttack();
 			// Remove the dwarf from the world
-			GetWorldTimerManager().SetTimer(DeathTimerHandle, this, &ADwarfCharacter::StartDeath, PlayAnimMontage(DeathAnim), false);
+			GetWorldTimerManager().SetTimer(DeathTimerHandle, this, &ADwarfCharacter::StartDeath, PlayAnimMontage(DeathAnim) - 0.25f, false);
 		}
 	}
 
@@ -75,9 +77,13 @@ float ADwarfCharacter::TakeDamage(float Damage, struct FDamageEvent const& Damag
 void ADwarfCharacter::StartDeath()
 {
 	StopAnimMontage(DeathAnim); // stop animation
-	AAIDwarfController* DwarfController = Cast<AAIDwarfController>(GetController());
-	DwarfController->SetCurrentDwarfState(EDwarfState::EDead); // set dwarf controller state to EDead
-	DwarfController->UnPossess(); // unpossess controller
+	GetMesh()->Deactivate();
 	Destroy(); // remove dwarf
 	GetWorldTimerManager().ClearTimer(DeathTimerHandle);
+}
+
+// returns true if the dwarf is dead, false if not
+bool ADwarfCharacter::IsDead()
+{
+	return Dead;
 }
