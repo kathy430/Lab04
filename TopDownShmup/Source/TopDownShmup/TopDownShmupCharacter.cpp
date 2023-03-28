@@ -99,7 +99,7 @@ float ATopDownShmupCharacter::TakeDamage(float Damage, struct FDamageEvent const
 	{
 		if (GEngine)
 		{
-			GEngine->AddOnScreenDebugMessage(4, 1.0f, FColor::Red, FString::Printf(TEXT("Player hit!Current health : %f / 100"), Health));
+			GEngine->AddOnScreenDebugMessage(4, 1.0f, FColor::Red, FString::Printf(TEXT("Player hit! Current health : %f / 100"), Health));
 		}
 
 		// Reduce health points
