@@ -15,7 +15,7 @@ void ASpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
 
-	SpawnCharacter();
+	GetWorldTimerManager().SetTimer(SpawnTimerHandle, this, &ASpawnManager::SpawnCharacter, minSpawnTime, true);
 
 }
 
@@ -48,8 +48,13 @@ void ASpawnManager::SpawnCharacter() {
 
 				ADwarf->SpawnDefaultController();
 			}
-
 		}
 	}
-}
+	GetWorldTimerManager().ClearTimer(RandSpawnTimerHandle);
 
+	// sets timer to spawn dwarf at random time
+	float time = FMath::RandRange(minSpawnTime, maxSpawnTime);
+	GetWorldTimerManager().SetTimer(RandSpawnTimerHandle, this, &ASpawnManager::SpawnCharacter, time, true);
+
+	GetWorldTimerManager().ClearTimer(SpawnTimerHandle);
+}
