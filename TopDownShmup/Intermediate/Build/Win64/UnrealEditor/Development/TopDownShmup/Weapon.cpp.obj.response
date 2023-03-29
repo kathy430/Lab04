@@ -1,4 +1,4 @@
-C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Source\TopDownShmup\Weapon.cpp
+"C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Source\TopDownShmup\Weapon.cpp"
 /I .
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine
 /I Runtime
@@ -707,9 +707,9 @@ C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Source\TopDownShmup\Weapon.
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController
 /I Developer\AnimationDataController\Public
 /I Developer\AnimationDataController
-/I C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Inc\TopDownShmup
-/I C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Source
-/I C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Source\TopDownShmup
+/I "C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Inc\TopDownShmup"
+/I "C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Source"
+/I "C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Source\TopDownShmup"
 /I ThirdParty\mimalloc\include
 /I ThirdParty\LibTiff\Source\Win64
 /I ThirdParty\LibTiff\Source
@@ -726,16 +726,16 @@ C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Source\TopDownShmup\Weapon.
 /I ThirdParty\PhysX3\PhysX_3.4\Include\geometry
 /I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Intermediate\Build\Win64\TopDownShmupEditor\Development\Engine\SharedPCH.Engine.h"
-/FI"C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Development\TopDownShmup\Definitions.TopDownShmup.h"
-/Yu"C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Intermediate\Build\Win64\TopDownShmupEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Intermediate\Build\Win64\TopDownShmupEditor\Development\Engine\SharedPCH.Engine.h.pch"
-/Fo"C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Development\TopDownShmup\Weapon.cpp.obj"
-/sourceDependencies C:\Users\Anthony\Documents\GitHub\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Development\TopDownShmup\Weapon.cpp.json
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
+/FI"C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Intermediate\Build\Win64\TopDownShmupEditor\Development\Engine\SharedPCH.Engine.h"
+/FI"C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Development\TopDownShmup\Definitions.TopDownShmup.h"
+/Yu"C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Intermediate\Build\Win64\TopDownShmupEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Intermediate\Build\Win64\TopDownShmupEditor\Development\Engine\SharedPCH.Engine.h.pch"
+/Fo"C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Development\TopDownShmup\Weapon.cpp.obj"
+/sourceDependencies "C:\Users\itsca\Documents\Unreal Projects\Lab04\TopDownShmup\Intermediate\Build\Win64\UnrealEditor\Development\TopDownShmup\Weapon.cpp.json"
 /Zc:inline
 /nologo
 /Oi

@@ -1,21 +1,21 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\anthony\\documents\\github\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\dwarfcharacter.gen.cpp",
+        "Source": "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\dwarfcharacter.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\anthony\\documents\\github\\lab04\\topdownshmup\\intermediate\\build\\win64\\topdownshmupeditor\\development\\engine\\sharedpch.engine.h.pch",
+        "PCH": "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\topdownshmupeditor\\development\\engine\\sharedpch.engine.h.pch",
         "Includes": [
-            "c:\\users\\anthony\\documents\\github\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\development\\topdownshmup\\definitions.topdownshmup.h",
-            "c:\\users\\anthony\\documents\\github\\lab04\\topdownshmup\\source\\topdownshmup\\dwarfcharacter.h",
-            "c:\\users\\anthony\\documents\\github\\lab04\\topdownshmup\\source\\topdownshmup\\enemycharacter.h",
+            "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\development\\topdownshmup\\definitions.topdownshmup.h",
+            "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\source\\topdownshmup\\dwarfcharacter.h",
+            "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\source\\topdownshmup\\enemycharacter.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementreplication.generated.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
-            "c:\\users\\anthony\\documents\\github\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\enemycharacter.generated.h",
-            "c:\\users\\anthony\\documents\\github\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\dwarfcharacter.generated.h"
+            "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\enemycharacter.generated.h",
+            "c:\\users\\itsca\\documents\\unreal projects\\lab04\\topdownshmup\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownshmup\\dwarfcharacter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

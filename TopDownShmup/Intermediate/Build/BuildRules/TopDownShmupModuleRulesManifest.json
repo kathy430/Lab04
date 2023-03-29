@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Anthony\\Documents\\GitHub\\Lab04\\TopDownShmup\\Source\\TopDownShmup\\TopDownShmup.Build.cs",
-		"C:\\Users\\Anthony\\Documents\\GitHub\\Lab04\\TopDownShmup\\Source\\TopDownShmup.Target.cs",
-		"C:\\Users\\Anthony\\Documents\\GitHub\\Lab04\\TopDownShmup\\Source\\TopDownShmupEditor.Target.cs"
+		"C:\\Users\\itsca\\Documents\\Unreal Projects\\Lab04\\TopDownShmup\\Source\\TopDownShmup\\TopDownShmup.Build.cs",
+		"C:\\Users\\itsca\\Documents\\Unreal Projects\\Lab04\\TopDownShmup\\Source\\TopDownShmup.Target.cs",
+		"C:\\Users\\itsca\\Documents\\Unreal Projects\\Lab04\\TopDownShmup\\Source\\TopDownShmupEditor.Target.cs"
 	],
 	"EngineVersion": "5.0.3"
 }
