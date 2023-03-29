@@ -24,10 +24,10 @@ public:
 		TSubclassOf<ADwarfCharacter> Character;
 
 	UPROPERTY(EditAnywhere, Category = Spawn)
-		float minSpawnTime;
+		float minSpawnTime = 3.5f;
 
 	UPROPERTY(EditAnywhere, Category = Spawn)
-		float maxSpawnTime;
+		float maxSpawnTime = 5.5f;
 
 	void SpawnCharacter();
 
@@ -42,4 +42,7 @@ public:
 private:
 	ACharacter* TheDwarf;
 	ADwarfCharacter* ADwarf = Cast<ADwarfCharacter>(TheDwarf);
+
+	FTimerHandle SpawnTimerHandle;
+	FTimerHandle RandSpawnTimerHandle;
 };
