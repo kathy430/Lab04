@@ -42,7 +42,7 @@ void AWeapon::OnStartFire()
 void AWeapon::OnStopFire()
 {
 	// stop firing loop sound
-	FireAC->Stop();
+	FireAC->Deactivate();
 	// play fire finish sound
 	PlayWeaponSound(FireFinishSound);
 
